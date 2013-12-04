@@ -1,0 +1,264 @@
+/*
+ Theme Name:     ILT 2013
+ Theme URI:      http://johnksawers.com
+ Description:    Inner Light Tools - 2013 Child Theme
+ Author:         John K Sawers
+ Author URI:     http://johnksawers.com
+ Template:       twentythirteen
+ Version:        1.0.0
+*/
+
+@import url("../twentythirteen/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url('http://themes.googleusercontent.com/font?kit=RJMlAoFXXQEzZoMSUteGWKCWcynf_cDxXwCLxiixG1c') format('truetype');
+}
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Abel'), local('Abel-Regular'), url('http://themes.googleusercontent.com/static/fonts/abel/v1/wnJbeWILdr-ZMJJAMsiXsvesZW2xOQ-xsNqO47m55DA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Oswald '), local('Oswald'), url('http://themes.googleusercontent.com/static/fonts/oswald/v1/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');
+}
+
+body {
+    background-color: #FFF;
+    font: 16px Abel,Helvetica, sans-serif;
+    font-weight: 300;
+    line-height:1.5;
+}
+
+a{
+    color:#97BAF3;
+}
+
+/* Head */
+
+header {
+  background-color: #FFFFEB;
+  width: 100%;
+  height: 80px;
+  text-align: left;
+  margin-bottom: 49px;
+}
+
+
+.home-link {
+    margin: 0;
+    background: #FFFFEB url(images/sunrise.png) no-repeat 8px -20px;
+}
+
+.site-title {
+    font-family: Raleway, arial, sans-serif;
+    font-size: 65px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+    margin: 0;
+    padding: 30px 0 0 0;
+    border: none;
+}
+
+.site-header a:link, .site-header a:visited, .site-header a:hover {
+    color: #000;
+    text-decoration: none;
+    min-height: 0;
+}
+
+.underBar{
+  width: 100%;
+  height:10px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background-color: #FFFFBB;
+  z-index: 1;
+  position: absolute;
+  top: 85px;
+}
+
+/* NAVIGATION  */
+
+#navbar{
+    background: none;
+}
+
+nav{
+  margin: 0 auto;
+}
+
+nav li{
+  float: left;
+  padding: 0;
+  margin: 0;
+  line-height: 32px;
+  border-right: 1px solid #999999;
+}
+
+.nav-menu li a{
+  color: #333;
+  font-family: Oswald, arial, sans-serif;
+  font-size: 15px;
+  line-height: 32px;
+  padding: 0 20px;
+}
+
+nav a:hover{
+    background-color: #CCCCCC;
+}
+
+nav li a:hover,
+nav li a:active{
+  color: red;
+}
+
+nav a:visited{
+  color: #000
+}
+
+nav li.last{
+  border:none;
+}
+
+nav li.log-out a{
+  color:#999999;
+}
+
+nav ul{
+  height: 34px;
+  background-color: #CCCCCC;
+  border-color:#999999;
+  border-style:solid;
+  border-width: 0 1px 1px;
+  background-image: -moz-linear-gradient(top, #E0F5FF, #97BAF3); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #E0F5FF),color-stop(1, #97BAF3)); /* Saf4+, Chrome */
+  filter:	progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3'); /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3')"; /* IE8 */
+}
+
+nav .search-form{
+    display: none;
+}
+
+.hentry {
+    padding: 20px 0;
+}
+
+h1{
+    clear: both;
+    font-family: Oswald,arial,sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 10px 0;
+    padding: 0;
+    background: none;
+}
+
+/* HOME PAGE STYLES */
+.home_page_container{
+    #margin: 0 auto;
+}
+
+.home_page_container .entry-content{
+    padding: 0;
+}
+
+.home_widget{
+    float: left;
+    width: 25%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* HOME PAGE WIDGETS */
+.home_widget > h2{
+    display:none;
+}
+
+.promo {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.promo a:hover {
+  color: #e2cb4e;
+}
+
+.promo .name {
+  margin: 0;
+}
+.promo .name a {
+        font-family: Raleway, arial, sans-serif;
+  color: #000;
+  font-size: 25px;
+  font-weight: 300;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.promo .name a:hover {
+  color: #e2cb4e;
+}
+.promo .description {
+  height: 100px;
+  line-height: 20px;
+}
+.promo .image {
+  display: block;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+}
+
+.promo .image:after {
+  content: ".";
+  display: block;
+  width: 0;
+  height: 0;
+  text-indent: -9999em;
+  position: absolute;
+  bottom: 0;
+  left: 46%;
+  border-left: 9px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-right: 9px solid transparent;
+}
+
+
+.promo button {
+    border-radius: 0px;
+    font-size: 18px;
+    line-height: 1.33;
+    padding: 10px 16px;
+    background-color: #428BCA;
+    background-image: none;
+    border-color: #357EBD;
+    color: #FFFFFF;
+    -moz-user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
