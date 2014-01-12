@@ -1,10 +1,10 @@
 <?php get_header() ?>
 <div id="main" class="site-main">
     <div id="primary" class="content-area">
-        <div id="content" class="site-content homepage_container" role="main">
+        <div id="content" class="site-content home_page_container" role="main">
             <header class="entry-header">
                 <h1 class="entry-title">
-                    <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+                    <a href="<?php the_permalink(); ?>" rel="bookmark">Spend More Time Healing</a>
                 </h1>
             </header>
             <div class="entry-content">

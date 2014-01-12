@@ -169,10 +169,23 @@ h1{
 
 /* HOME PAGE STYLES */
 .home_page_container{
-    #margin: 0 auto;
+  position: relative;
+  top: 20px;
 }
 
-.home_page_container .entry-content{
+.sidebar .entry-header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-image: url(http://wordpress.dev/wp-content/uploads/2013/12/Spend-More-Time-Healing-Banner-Test-1.jpg);
+}
+
+.entry-header a {
+    font-size: 35px;
+    color: #FFFFFF;
+}
+
+.sidebar .entry-content{
     padding: 0;
 }
 
@@ -191,20 +204,20 @@ h1{
     display:none;
 }
 
-.promo {
+.poovey_widget {
   position: relative;
   margin-bottom: 20px;
 }
 
-.promo a:hover {
+.poovey_widget a:hover {
   color: #e2cb4e;
 }
 
-.promo .name {
+.poovey_widget .name {
   margin: 0;
 }
-.promo .name a {
-        font-family: Raleway, arial, sans-serif;
+.poovey_widget .name a {
+  font-family: Raleway, arial, sans-serif;
   color: #000;
   font-size: 25px;
   font-weight: 300;
@@ -213,21 +226,21 @@ h1{
   overflow: hidden;
   padding: 10px 0;
 }
-.promo .name a:hover {
+.poovey_widget .name a:hover {
   color: #e2cb4e;
 }
-.promo .description {
-  height: 100px;
+.poovey_widget .description {
+  height: 150px;
   line-height: 20px;
 }
-.promo .image {
+.poovey_widget .image {
   display: block;
   margin-bottom: 0px;
   position: relative;
   text-align: center;
 }
 
-.promo .image:after {
+.poovey_widget .image:after {
   content: ".";
   display: block;
   width: 0;
@@ -242,7 +255,7 @@ h1{
 }
 
 
-.promo button {
+.poovey_widget .button {
     border-radius: 0px;
     font-size: 18px;
     line-height: 1.33;
