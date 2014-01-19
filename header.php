@@ -46,5 +46,3 @@
 				</nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
 		</header><!-- #masthead -->
-
-		<div id="main" class="site-main">

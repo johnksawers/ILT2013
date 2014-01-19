@@ -1,7 +1,7 @@
 <?php
     // This function loads the plugin.
     function ilt_load_plugin() {
-        
+
         if (!class_exists('wp_hero_unit_widget')) {
             include_once(STYLESHEETPATH.'/plugins/hero-unit-widget/hero-unit-widget.php');
         }
@@ -15,16 +15,24 @@
      * Register our sidebars and widgetized areas.
      *
      */
-    function arphabet_widgets_init() {
-        
+    function ilt2013_widgets_init() {
+
         register_sidebar( array(
-                                'name' => 'Home Top Widget Area',
-                                'id' => 'home_top_1',
+                                'name' => 'Home Top Hero Unit Area',
+                                'id' => 'home_hero_top',
+                                ) );
+        register_sidebar( array(
+                                'name' => 'Home Main Widget Area',
+                                'id' => 'home_main_widget',
                                 'before_widget' => '<div class="home_widget">',
                                 'after_widget' => '</div>',
                                 'before_title' => '<h2>',
                                 'after_title' => '</h2>',
                                 ) );
+        register_sidebar( array(
+                                'name' => 'Home Bottom Hero Unit Area',
+                                'id' => 'home_hero_bottom',
+                                ) );
     }
-    add_action( 'widgets_init', 'arphabet_widgets_init' );
+    add_action( 'widgets_init', 'ilt2013_widgets_init' );
 ?>

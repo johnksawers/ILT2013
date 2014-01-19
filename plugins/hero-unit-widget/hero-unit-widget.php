@@ -8,26 +8,27 @@
      Author URI: http://johnksawers.com
      License: MIT
      */
-    
+
     class wp_hero_unit_widget extends WP_Widget {
-        
+
         // constructor
         function wp_hero_unit_widget() {
             parent::WP_Widget(false, $name = __('Hero Unit Widget', 'wp_hero_unit_widget'));
         }
-        
+
         // widget form creation
         function form($instance) {
-            
+
             // Check values
             if( $instance) {
                 $title = esc_attr($instance['title']);
-                $text = esc_attr($instance['text']);
-                $textarea = apply_filters( 'widget_textarea', empty( $instance['textarea'] ) ? '' : $instance['textarea'], $instance );
+                $color = esc_attr($instance['color']);
+                $image_url = esc_attr($instance['image_url']);
+
             } else {
                 $title = '';
-                $text = '';
-                $textarea = '';
+                $color = '';
+                $image_url = '';
             }
             ?>
 
@@ -37,59 +38,50 @@
 </p>
 
 <p>
-<label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text:', 'wp_widget_plugin'); ?></label>
-<input class="widefat" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>" type="text" value="<?php echo $text; ?>" />
+<label for="<?php echo $this->get_field_id('color'); ?>"><?php _e('Color:', 'wp_widget_plugin'); ?></label>
+<input class="widefat" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php echo $color; ?>" />
 </p>
 
 <p>
-<label for="<?php echo $this->get_field_id('textarea'); ?>"><?php _e('Textarea:', 'wp_widget_plugin'); ?></label>
-<textarea class="widefat" id="<?php echo $this->get_field_id('textarea'); ?>" name="<?php echo $this->get_field_name('textarea'); ?>"><?php echo $textarea; ?></textarea>
+<label for="<?php echo $this->get_field_id('image_url'); ?>"><?php _e('Image Url:', 'wp_widget_plugin'); ?></label>
+<input class="widefat" id="<?php echo $this->get_field_id('image_url'); ?>" name="<?php echo $this->get_field_name('image_url'); ?>" type="text" value="<?php echo $image_url; ?>" />
 </p>
 <?php
     }
-    
+
     // update widget
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
         // Fields
         $instance['title'] = strip_tags($new_instance['title']);
-        $instance['text'] = strip_tags($new_instance['text']);
-        if ( current_user_can('unfiltered_html') )
-            $instance['textarea'] =  $new_instance['textarea'];
-        else
-            $instance['textarea'] = stripslashes(wp_filter_post_kses(addslashes($new_instance['textarea'])));
-        
+        $instance['color'] = strip_tags($new_instance['color']);
+        $instance['image_url'] = strip_tags($new_instance['image_url']);
+
         return $instance;
     }
-    
+
     // display widget
     function widget($args, $instance) {
         extract( $args );
         // these are the widget options
-        $title = apply_filters('widget_title', $instance['title']);
-        $text = $instance['text'];
-        $textarea = $instance['textarea'];
+        $title = $instance['title'];
+        $color = $instance['color'];
+        $image_url = $instance['image_url'];
         echo $before_widget;
         // Display the widget
-        echo '<div class="widget-text wp_widget_plugin_box">';
-        
-        // Check if title is set
-        if ( $title ) {
-            echo $before_title . $title . $after_title;
-        }
-        
+        echo '<div class="widget-text wp_widget_plugin_box"><div class="hero_unit_widget">';
+
         // Check if text is set
-        if( $text ) {
-            echo '<p class="wp_widget_plugin_text">'.$text.'</p>';
+        if( $color && $image_url && $title ) {
+            echo '<div class="background" style="color: '.$color.'; background-image: url('.$image_url.');">'.$title.'</div>';
         }
-        // Check if textarea is set
-        if( $textarea ) { echo wpautop($textarea); }
-        
-        echo '</div>';
+
+
+        echo '</div></div>';
         echo $after_widget;
     }
     }
-    
+
     // register widget
     add_action('widgets_init', create_function('', 'return register_widget("wp_hero_unit_widget");'));
-    
+

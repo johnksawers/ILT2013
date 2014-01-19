@@ -7,271 +7,360 @@
  Template:       twentythirteen
  Version:        1.0.0
 */
-
 @import url("../twentythirteen/style.css");
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
-
-
 @font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Raleway Thin'), local('Raleway-Thin'), url('http://themes.googleusercontent.com/font?kit=RJMlAoFXXQEzZoMSUteGWKCWcynf_cDxXwCLxiixG1c') format('truetype');
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Raleway Thin'), local('Raleway-Thin'), url('http://themes.googleusercontent.com/font?kit=RJMlAoFXXQEzZoMSUteGWKCWcynf_cDxXwCLxiixG1c') format('truetype');
 }
+
 @font-face {
-  font-family: 'Abel';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Abel'), local('Abel-Regular'), url('http://themes.googleusercontent.com/static/fonts/abel/v1/wnJbeWILdr-ZMJJAMsiXsvesZW2xOQ-xsNqO47m55DA.woff') format('woff');
+	font-family: 'Abel';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Abel'), local('Abel-Regular'), url('http://themes.googleusercontent.com/static/fonts/abel/v1/wnJbeWILdr-ZMJJAMsiXsvesZW2xOQ-xsNqO47m55DA.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Oswald '), local('Oswald'), url('http://themes.googleusercontent.com/static/fonts/oswald/v1/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Oswald '), local('Oswald'), url('http://themes.googleusercontent.com/static/fonts/oswald/v1/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff');
 }
 
 body {
-    background-color: #FFF;
-    font: 16px Abel,Helvetica, sans-serif;
-    font-weight: 300;
-    line-height:1.5;
+	font: 16px Abel, Helvetica, sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	background: #FFF url(http://wordpress.dev/wp-content/uploads/2014/01/color-wash.jpg) left top repeat;
 }
 
-a{
-    color:#97BAF3;
+a {
+	color: #97BAF3;
 }
 
 /* Head */
 
 header {
-  background-color: #FFFFEB;
-  width: 100%;
-  height: 80px;
-  text-align: left;
-  margin-bottom: 49px;
+	background-color: #FFFFEB;
+	width: 100%;
+	height: 85px;
+	text-align: left;
+	margin-bottom: 40px;
 }
 
+.site-header .site-title:hover {
+	text-decoration: none
+}
 
 .home-link {
-    margin: 0;
-    background: #FFFFEB url(images/sunrise.png) no-repeat 8px -20px;
+	margin: 0;
+	background: #FFFFEB url(images/sunrise.png) no-repeat 8px -20px;
 }
 
 .site-title {
-    font-family: Raleway, arial, sans-serif;
-    font-size: 65px;
-    z-index: 2;
-    font-weight: normal;
-    position: relative;
-    margin: 0;
-    padding: 30px 0 0 0;
-    border: none;
+	font-family: Raleway, arial, sans-serif;
+	font-size: 65px;
+	z-index: 2;
+	font-weight: normal;
+	position: relative;
+	margin: 0;
+	padding: 30px 0 0 0;
+	border: none;
 }
 
 .site-header a:link, .site-header a:visited, .site-header a:hover {
-    color: #000;
-    text-decoration: none;
-    min-height: 0;
+	color: #000;
+	text-decoration: none;
+	min-height: 0;
 }
 
-.underBar{
-  width: 100%;
-  height:10px;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
-  background-color: #FFFFBB;
-  z-index: 1;
-  position: absolute;
-  top: 85px;
+.underBar {
+	width: 100%;
+	height: 10px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	background-color: #FFFFBB;
+	z-index: 1;
+	position: absolute;
+	top: 85px;
+}
+
+/* FOOTER   */
+
+footer.site-footer {
+	background-color: #FFFFEB;
+	border-top: 1px solid #AAAAAA;
+	margin-top: 20px;
+}
+
+footer .site-info {
+	margin: 0 auto;
+	max-width: 1040px;
+	padding: 15px 0;
+	width: 100%;
 }
 
 /* NAVIGATION  */
 
-#navbar{
-    background: none;
+.main-navigation {
+	clear: both;
+	margin: 0 auto;
+	max-width: 1040px;
+	min-height: 35px;
+	position: relative;
 }
 
-nav{
-  margin: 0 auto;
+#navbar {
+	background: none;
 }
 
-nav li{
-  float: left;
-  padding: 0;
-  margin: 0;
-  line-height: 32px;
-  border-right: 1px solid #999999;
+nav {
+	margin: 0 auto;
 }
 
-.nav-menu li a{
-  color: #333;
-  font-family: Oswald, arial, sans-serif;
-  font-size: 15px;
-  line-height: 32px;
-  padding: 0 20px;
+nav li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	line-height: 32px;
+	border-right: 1px solid #999999;
 }
 
-nav a:hover{
-    background-color: #CCCCCC;
+.nav-menu li a {
+	color: #333;
+	font-family: Oswald, arial, sans-serif;
+	font-size: 15px;
+	line-height: 32px;
+	padding: 0 20px;
+}
+
+nav a:hover {
+	background-color: #CCCCCC;
 }
 
 nav li a:hover,
-nav li a:active{
-  color: red;
+nav li a:active {
+	color: red;
 }
 
-nav a:visited{
-  color: #000
+nav a:visited {
+	color: #000
 }
 
-nav li.last{
-  border:none;
+nav li.last {
+	border: none;
 }
 
-nav li.log-out a{
-  color:#999999;
+nav li.log-out a {
+	color: #999999;
 }
 
-nav ul{
-  height: 34px;
-  background-color: #CCCCCC;
-  border-color:#999999;
-  border-style:solid;
-  border-width: 0 1px 1px;
-  background-image: -moz-linear-gradient(top, #E0F5FF, #97BAF3); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #E0F5FF),color-stop(1, #97BAF3)); /* Saf4+, Chrome */
-  filter:	progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3'); /* IE6,IE7 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3')"; /* IE8 */
+nav ul {
+	height: 34px;
+	background-color: #CCCCCC;
+	border-color: #999999;
+	border-style: solid;
+	border-width: 0 1px 1px;
+	background-image: -moz-linear-gradient(top, #E0F5FF, #97BAF3); /* FF3.6 */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0F5FF), color-stop(1, #97BAF3)); /* Saf4+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E0F5FF', EndColorStr='#97BAF3')"; /* IE8 */
 }
 
-nav .search-form{
-    display: none;
+nav .search-form {
+	display: none;
+}
+
+div.site {
+	background-color: transparent;
+}
+
+#page {
+	background-color: transparent;
 }
 
 .hentry {
-    padding: 20px 0;
+	padding: 20px 0;
 }
 
-h1{
-    clear: both;
-    font-family: Oswald,arial,sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    margin: 10px 0;
-    padding: 0;
-    background: none;
+h1 {
+	clear: both;
+	font-family: Oswald, arial, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 30px;
+	margin: 10px 0;
+	padding: 0;
+	background: none;
 }
 
 /* HOME PAGE STYLES */
-.home_page_container{
-  position: relative;
-  top: 20px;
+.home_page_container {
+	position: relative;
+	top: 20px;
 }
 
-.sidebar .entry-header{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-image: url(http://wordpress.dev/wp-content/uploads/2013/12/Spend-More-Time-Healing-Banner-Test-1.jpg);
+.sidebar .entry-header {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-image: url(http://wordpress.dev/wp-content/uploads/2013/12/Spend-More-Time-Healing-Banner-Test-1.jpg);
 }
 
 .entry-header a {
-    font-size: 35px;
-    color: #FFFFFF;
+	font-size: 35px;
+	color: #FFFFFF;
 }
 
-.sidebar .entry-content{
-    padding: 0;
+.sidebar .entry-content {
+	padding: 0;
 }
 
-.home_widget{
-    float: left;
-    width: 25%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+.home_main_widget_container {
+	margin-bottom: 20px;
 }
 
+.home_widget {
+	float: left;
+	width: 25%;
+	position: relative;
+	min-height: 1px;
+	padding: 0 10px;
+}
+
+.home_widget:first-child {
+	padding-left: 0;
+}
+
+.home_widget:last-child {
+	padding-right: 0;
+}
 
 /* HOME PAGE WIDGETS */
-.home_widget > h2{
-    display:none;
-}
 
 .poovey_widget {
-  position: relative;
-  margin-bottom: 20px;
+	position: relative;
+	padding: 15px;
+	background-color: #FFFFEB;
+	height: 430px;
 }
 
 .poovey_widget a:hover {
-  color: #e2cb4e;
+	color: #e2cb4e;
 }
 
 .poovey_widget .name {
-  margin: 0;
+	margin: 0;
 }
+
 .poovey_widget .name a {
-  font-family: Raleway, arial, sans-serif;
-  color: #000;
-  font-size: 25px;
-  font-weight: 300;
-  text-decoration: none;
-  display: block;
-  overflow: hidden;
-  padding: 10px 0;
+	font-family: Oswald, arial, sans-serif;
+	color: #000;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	padding: 5px 0;
 }
-.poovey_widget .name a:hover {
-  color: #e2cb4e;
-}
+
 .poovey_widget .description {
-  height: 150px;
-  line-height: 20px;
+	height: 150px;
+	line-height: 20px;
 }
+
 .poovey_widget .image {
-  display: block;
-  margin-bottom: 0px;
-  position: relative;
-  text-align: center;
+	display: block;
+	margin-bottom: 0px;
+	position: relative;
+	text-align: center;
 }
 
 .poovey_widget .image:after {
-  content: ".";
-  display: block;
-  width: 0;
-  height: 0;
-  text-indent: -9999em;
-  position: absolute;
-  bottom: 0;
-  left: 46%;
-  border-left: 9px solid transparent;
-  border-bottom: 8px solid #fff;
-  border-right: 9px solid transparent;
+	content: ".";
+	display: block;
+	width: 0;
+	height: 0;
+	text-indent: -9999em;
+	position: absolute;
+	bottom: 0;
+	left: 46%;
+	border-left: 9px solid transparent;
+	border-bottom: 8px solid #fff;
+	border-right: 9px solid transparent;
+}
+
+.poovey_widget .button {
+	border-radius: 0px;
+	font-size: 18px;
+	line-height: 1.33;
+	background-color: #428BCA;
+	background-image: none;
+	border-color: #357EBD;
+	color: #FFFFFF;
+	-moz-user-select: none;
+	border: 1px solid rgba(0, 0, 0, 0);
+	cursor: pointer;
+	display: inline-block;
+	font-weight: normal;
+	margin-bottom: 0;
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+/*HERO UNIT WIDGET */
+
+.hero-unit-area li {
+	list-style-type: none;
+	padding: 0;
+}
+
+.hero-unit-area{
+	clear: both;
+}
+
+.hero-unit-area .hero_unit_widget .background {
+	font-size: 40px;
+	padding: 0;
+	height: 85px;
+	width: 1040px;
+	line-height: 85px;
+	padding-left: 20px;
 }
 
 
-.poovey_widget .button {
-    border-radius: 0px;
-    font-size: 18px;
-    line-height: 1.33;
-    padding: 10px 16px;
-    background-color: #428BCA;
-    background-image: none;
-    border-color: #357EBD;
-    color: #FFFFFF;
-    -moz-user-select: none;
-    border: 1px solid rgba(0, 0, 0, 0);
-    cursor: pointer;
-    display: inline-block;
-    font-weight: normal;
-    margin-bottom: 0;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
 }
